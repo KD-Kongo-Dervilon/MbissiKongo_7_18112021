@@ -1,29 +1,25 @@
-.listUlApp>li:hover {
-    background-color: #ffff;
+.listUlApp > li :hover {
+    background: #fff;
     color: #68D9A4;
 }
 
-#ingredients>button:hover {
-    background-color: #0751bc;
+#ingredients > button:hover {
+    background: #0751bc;
 }
 
-#ingredientTag>i:hover {
-    color: #0751bc;
+#appareil > button:hover {
+    background: #2caf72;
 }
 
-#appareil>button:hover {
-    background-color: #2caf72;
-}
-
-#appareilTag>i:hover {
+#appareilTag > i:hover {
     color: #2caf72;
 }
 
-#ustensiles>button:hover {
-    background-color: #dd2c17;
+#ustensiles > button:hover {
+    background: #dd2c17;
 }
 
-#ustensileTag>i:hover {
+#ustensilesTag > i:hover {
     color: #dd2c17;
 }
 
@@ -50,7 +46,7 @@
 #hiddenAppareilFilter,
 #hiddenUstensilesFilter {
     border-radius: 5px;
-    color: #ffff;
+    color: #fff;
     display: none;
     position: absolute;
     top: 16.2rem;
@@ -58,13 +54,13 @@
     z-index: 10;
 }
 
-#ingredients>button,
-#appareil>button,
-#ustensiles>button {
+#ingredients > button,
+#appareil > button,
+#ustensiles > button {
     align-items: center;
     border: none;
     border-radius: .3125rem;
-    color: #ffff;
+    color: #fff;
     cursor: pointer;
     display: flex;
     font-size: 1.125rem;
@@ -73,7 +69,7 @@
     margin-bottom: 1rem;
     padding: 1rem;
     transition: linear .3s;
-    width: 11rem;
+    width: 100%;
 }
 
 .listUlIng,
@@ -185,5 +181,11 @@
     #appareil>button,
     #ustensiles>button {
         margin-right: 2rem;
+    }
+
+    #ingredients,
+    #appareil,
+    #ustensiles {
+    padding-right: 2rem;
     }
 }
