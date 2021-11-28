@@ -1,6 +1,6 @@
 'use strict';
 
-import Normalize from '../logic/Normalize.js';
+import Utils from '../utilities/Utils.js';
 
 export default class DomService {
     // build the section containing the recipes to display

@@ -1,3 +1,12 @@
+'use strict';
+
+import Buttons from '../page/Buttons.js';
+import DomService from '../page/DomService.js';
+import Messages from '../page/Messages.js';
+import Search from '../search/Search.js';
+import Tags from '../page/Tags.js';
+import Utils from '../utilities/Utils.js';
+import DataLogic from '../utilities/DataLogic.js';
 
 export default class Ingredients {
     static ingredientsExample = document.getElementById('ingredientsExample');

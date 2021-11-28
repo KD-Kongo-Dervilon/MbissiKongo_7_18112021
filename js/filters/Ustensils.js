@@ -1,3 +1,13 @@
+'use strict';
+
+import Buttons from '../page/Buttons.js';
+import DataLogic from '../utilities/DataLogic.js';
+import DomService from '../page/DomService.js';
+import Messages from '../page/Messages.js';
+import Search from '../search/Search.js';
+import Tags from '../page/Tags.js';
+import Utils from '../utilities/Utils.js';
+
 export default class Ustensils {
     static ustensilsExample = document.getElementById('ustensilesExample');
 

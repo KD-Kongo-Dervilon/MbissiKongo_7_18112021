@@ -1,7 +1,7 @@
 'use strict';
 
 import Appliances from '../filters/Appliances.js';
-import DataLogic from '../logic/DataLogic.Js';
+import DataLogic from '../utilities/DataLogic.js';
 import DomService from './DomService.js';
 import Ingredients from '../filters/Ingredients.js';
 import Messages from './Messages.js';

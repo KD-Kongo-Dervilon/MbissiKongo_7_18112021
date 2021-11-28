@@ -1,7 +1,7 @@
 'use strict';
 
-import DataLogic from '../logic/DataLogic.js';
-import Normalize from '../logic/Normalize.js';
+import DataLogic from '../utilities/DataLogic.js';
+import Utils from '../utilities/Utils.js';
 
 export default class Search {
     static searchMainInput(value) {

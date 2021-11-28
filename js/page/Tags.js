@@ -2,11 +2,11 @@
 
 import DomService from './DomService.js';
 import Messages from './Messages.js';
-import Normalize from '../logic/Normalize.js';
+import Utils from '../utilities/Utils.js';
 import Ingredients from '../filters/Ingredients.js';
 import Appliances from '../filters/Appliances.js';
 import Ustensils from '../filters/Ustensils.js';
-import DataLogic from '../logic/DataLogic.js';
+import DataLogic from '../utilities/DataLogic.js';
 
 export default class Badges {
     static hiddenIngredientsFilter = document.querySelector('#hiddenIngredientsFilter');

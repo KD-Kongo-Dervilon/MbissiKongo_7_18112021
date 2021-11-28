@@ -2,7 +2,7 @@
 import Builder from './page/Builder.js';
 import Messages from './page/Messages.js';
 import Search from './search/Search.js';
-import Normalize from './logic/Normalize.js';
+import Utils from './utilities/Utils.js';
 
 // Build by default without search
 Builder.init();
