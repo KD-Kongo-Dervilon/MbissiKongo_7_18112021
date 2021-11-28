@@ -1,3 +1,14 @@
+'use strict';
+
+import Buttons from '../page/Buttons.js';
+import DataLogic from '../logic/DataLogic.js';
+import DomServices from '../page/DomService.js';
+import Messages from '../page/Messages.js';
+import Search from '../search/Search.js';
+import Tags from '../page/Tags.js';
+import Normalize from '../logic/Normalize.js';
+
+
 export default class Appliances {
     static appliancesExample = document.getElementById('appareilExample');
 
