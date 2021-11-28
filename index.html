@@ -1,107 +1,46 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <!--======== Link Favicon ========-->
-    <link rel="shortcut icon" href="./assets/favicon/Favicon.png" type="image/png">
-    <!--==== Link Fontawesome ========-->
-    <script src="https://kit.fontawesome.com/5f5fe7de0e.js" defer crossorigin="anonymous"></script>
-    <!--==== Link css/style.css=======-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les petits plats</title>
+
+    <link rel="icon" type="image/png" href="./img/icon_chef.png">
     <link rel='stylesheet' href='./css/style.css'>
-    <!--== Link google  font  lato ===-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
-    <!--== Link google  font Roboto ==-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
-    <!--== Title les petits plats ====-->
-    <title>Les petis plats</title>
+    <script src="https://kit.fontawesome.com/e70494c283.js" crossorigin="anonymous"></script>
+
 </head>
-
 <body>
-    <!-- HEADER-->
+    <!--HEADER-->
     <header>
-        <img src="./assets/logo/logo.svg" alt="Les petits plats" />
-
-        <!-- SEARCH BAR-->
+        <img class="logo" src="./img/logo.svg" alt="Les petits plats" />
+        <!--Search Bar -->
         <form id='searchBar'>
             <label for="searchBarInput"></label>
-            <input type="search" id="searchBarInput"
+            <input type="search" class="searchBarInput"
                 placeholder="Rechercher un ingrédient, appareil, ustensile ou une recette"
                 aria-label="Search through site content">
             <i class="fas fa-search"></i>
         </form>
-
-        <!-- Badges added dynamically: -->
+    
+        <!-- Tags -->
         <nav id="tagsBadges">
-            <span id="ingredientTag"></span>
-            <span id="appareilTag"></span>
-            <span id="ustensileTag"></span>
+                <div id="tag-ingredients"></div>
+                <div id="tag-appliance"></div>
+                <div id="tag-ustensils"></div>
         </nav>
+        
+        <!-- Filters -->
+        <div id="filters" class="type-search"></div>
 
-        <!-- FILTER -->
-        <div id="filter">
-
-            <!-- Ingredients -->
-            <div id="ingredients">
-                <!--Button Ingredients -->
-                <button>Ingrédients <i class="fas fa-chevron-down" id='openIngredientsFilter'></i></button>
-                <div id='hiddenIngredientsFilter'>
-                    <label for="inputIngredients"></label>
-                    <input type="search" id="inputIngredients" aria-label="Search through ingredients"
-                    placeholder="Rechercher un ingrédient">
-                    <i class="fas fa-chevron-up" id="closeIngredientsFilter"></i>
-                    <div id='ingredientsExample'></div>
-                </div>
-            </div>
-            
-            <!-- Appareil -->
-            <div id="appareil">
-                <!--Button Appareil -->
-                <button>Appareil <i class="fas fa-chevron-down" id='openAppareilFilter'></i></button>
-                <div id='hiddenAppareilFilter'>
-                    <label for="inputAppareil"></label>
-                    <input type="search" id="inputAppareil" aria-label="Search through appareil"
-                    placeholder="Rechercher un appareil">
-                    <i class="fas fa-chevron-up" id="closeAppareilFilter"></i>
-                    <div id='appareilExample'></div>
-                </div>
-            </div>
-            
-            <!-- ustensiles -->
-            <div id="ustensiles">
-                <!--Button ustensiles -->
-                <button>Ustensiles <i class="fas fa-chevron-down" id='openUstensilesFilter'></i></button>
-                <div id='hiddenUstensilesFilter'>
-                    <label for="inputUstensiles"></label>
-                    <input type="search" id="inputUstensiles" aria-label="Search through ustensiles"
-                        placeholder="Rechercher un ustensile">
-                    <i class="fas fa-chevron-up" id="closeUstensilesFilter"></i>
-                    <div id='ustensilesExample'></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dynamic search result message: -->
-        <aside id="resultMessage">
-            <span>Aucun résultat</span>
-            <i class="far fa-times-circle"></i>
-        </aside>
+        <!--Message -->
+        <div id="message"></div>
     </header>
 
-    <!-- RECIPES-->
-    <main id="mainContent"></main>
-    
-    <!-- RecipesData.js -->
-    <script src='./js/provider/recipesData.js'></script>
-    <!--Apps.js-->
-    <script type='module' src='./js/app.js'></script>
-</body>
+    <!--RECiPES-->
+    <main id="recipes"></main>
 
+    
+</body>
 </html>
