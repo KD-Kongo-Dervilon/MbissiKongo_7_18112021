@@ -17,7 +17,7 @@
 }
 
 #recipes>article:hover {
-	background-color: #ffe1e1;
+	background-color: #eee;
 	transform: scale(1.02);
     transition: all 0.3s;
 }

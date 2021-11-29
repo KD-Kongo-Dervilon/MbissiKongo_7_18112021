@@ -1,5 +1,5 @@
-class List 
-{
+class List {
+
     constructor() {
         this.all = [];
         this.filtered = [];
@@ -15,12 +15,16 @@ class List
 
     // Add filters // for a single action
     addFilter(filter) {
+
         this.filters.push(filter);
         filter.listenToDropdown();
         filter.listenForInputSearch();
-        filter.all = filter.collect(this.all);
+        
+        // pass for the first time
+        filter.all = filter.collect(this.all);   
         filter.filtered = filter.all;
         filter.build();
+        
     }
 
     // repeat multiple actions

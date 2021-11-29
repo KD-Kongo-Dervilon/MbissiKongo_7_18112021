@@ -9,13 +9,11 @@ class FilterByIngredient extends Filters {
 
         let list = new Set();
 
-        recipes.forEach((recipe => {
-
-            recipe.ingredients = forEach(item => {
+        recipes.forEach(recipe => {
+            recipe.ingredients.forEach(item => {
                 list.add(item.ingredient.toLowerCase());
             })
-        }))
-
+        });
         return list;
     }
 
@@ -27,28 +25,23 @@ class FilterByIngredient extends Filters {
             return recipes;
         }
 
-        return recipes.filter(recipe => {
+        return recipes.filter(recipe =>  {
 
             let isSelectable = false;
             let count = 0;
+    
+            this.selected.forEach(ing => {
 
-            this.selected.forEach(ing => 
-
-            {
                 let existingIngredients = recipe.ingredients.map(item => item.ingredient.toLowerCase());
-                if(existingIngredients.includes(ing)) 
-                {
-                    count++
-                }  
-            })
-
-            if(count == this.selected.size) 
-            
-            {
-                isSelectable = true;
-            }
-            return isSelectable;
+                if(existingIngredients.includes(ing)) {
+                        count++
+                    }  
+                })
+    
+                if(count == this.selected.size) {
+                    isSelectable = true;
+                }
+                return isSelectable;
         })
     }
-
 }
