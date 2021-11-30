@@ -1,159 +1,147 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-shadow */
+// eslint-disable-next-line no-unused-vars
 class Filters {
+  constructor(type) {
+    this.all = new Set();
+    this.filtered = new Set();
+    this.selected = new Set();
+    this.searchValue = '';
+    this.type = type;
+    this.renderDropdown();
+  }
 
-    constructor(type) {
-        this.all = new Set();
-        this.filtered = new Set();
-        this.selected = new Set();
-        this.searchValue = '';
-        this.type = type;
-        this.renderDropdown();
-    }
+  // build html
+  build() {
+    this.render();
+    this.listenForSelection();
+    this.listenForUnselect();
+  }
 
-    // build html 
-    build()  {
-        this.render();
-        this.listenForSelection(); 
-        this.listenForUnselect();
-    }
+  // Dropdown: opening
+  closeDropdown() {
+    document.querySelector('body').addEventListener('click', (e) => {
+      const parent = e.target.closest(`.dropdown-wrapper[data-type="${this.type}"]`);
 
-    // Dropdown: opening
-    closeDropdown(){
+      if (!parent) {
+        document.getElementById(`dropdown-${this.type}`).style.width = '8rem';
+        document.getElementById(`menu-${this.type}`).style.display = 'none';
+      }
 
-        document.querySelector('body').addEventListener('click', (e) => {
-            let parent = e.target.closest(`.dropdown-wrapper[data-type="${this.type}"]`)
+      this.searchValue = '';
+      document.getElementById(`${this.type}`).value = '';
+      this.filtered = this.all;
+      const tags = document.querySelectorAll(`.list-${this.type}`);
 
-            if (!parent) {
-                document.getElementById(`dropdown-${this.type}`).style.width = "8rem";             
-                document.getElementById(`menu-${this.type}`).style.display = "none"; 
-            }
+      tags.forEach((tag) => {
+        // eslint-disable-next-line no-param-reassign
+        tag.style.display = 'block';
+      });
+      document.getElementById(`${this.type}`).focus();
+    });
+  }
 
-            this.searchValue = '';
-            document.getElementById(`${this.type}`).value = '';
-            this.filtered = this.all;
-            let tags = document.querySelectorAll(`.list-${this.type}`);
+  // TAGS: displays selected tags
+  displayTags() {
+    let html = '';
 
-            tags.forEach((tag) => {
-                tag.style.display = "block"; 
-            })
-            document.getElementById(`${this.type}`).focus();
-        });
-    }
-
-    // TAGS: displays selected tags
-    displayTags() {
-
-        let html = '';
-
-        this.selected.forEach(tag =>  {
-            html += `<span class="selected-tag-${this.type} tag" data-filter="${tag}">${tag}
+    this.selected.forEach((tag) => {
+      html += `<span class="selected-tag-${this.type} tag" data-filter="${tag}">${tag}
                         <i class="far fa-times-circle closed-${this.type}" role="button"></i>
                     </span>
                     `;
-        })
-        document.getElementById(`tag-${this.type}`).innerHTML = html;
-    }
+    });
+    document.getElementById(`tag-${this.type}`).innerHTML = html;
+  }
 
-    // Dropdown Input: Written research 
-    filterByInput() {
+  // Dropdown Input: Written research
+  filterByInput() {
+    const tags = document.querySelectorAll(`.list-${this.type}`);
 
-        let tags = document.querySelectorAll(`.list-${this.type}`);
+    tags.forEach((tag) => {
+      const name = tag.getAttribute('data-filter');
 
-        tags.forEach((tag) => {
+      if (!name.toLowerCase().includes(this.searchValue.toLowerCase())) {
+        // eslint-disable-next-line no-param-reassign
+        tag.style.display = 'none';
+      } else {
+        // eslint-disable-next-line no-param-reassign
+        tag.style.display = 'block';
+      }
+    });
+  }
 
-            let name = tag.getAttribute("data-filter");
+  // Dropdown Input: Written research
+  listenForInputSearch() {
+    document.getElementById(`${this.type}`).addEventListener('input', (e) => {
+      this.searchValue = e.target.value;
+      this.filterByInput();
+    });
+  }
 
-            if (!name.toLowerCase().includes(this.searchValue.toLowerCase())) {
-                tag.style.display = "none";
-            
-            } else {
-                tag.style.display = "block";
-            }
-        }) 
-    }
+  // Listener Tags: tag selection
+  listenForSelection() {
+    document.querySelectorAll(`.list-${this.type}`).forEach((tag) => {
+      tag.addEventListener('click', (e) => {
+        const tag = e.target.getAttribute('data-filter');
+        this.selected.add(tag);
+        this.displayTags();
+        list.filtered = this.filter(list.filtered);
+        list.build(list.filtered);
+      });
+    });
+  }
 
-    // Dropdown Input: Written research
-    listenForInputSearch() {
-        document.getElementById(`${this.type}`).addEventListener("input", (e) => {
-            this.searchValue = e.target.value;
-            this.filterByInput();
-        })
-    }
+  // Listener Tags: close the tag selected by the cross
+  listenForUnselect() {
+    document.querySelectorAll(`.closed-${this.type}`).forEach((tag) => {
+      tag.addEventListener('click', (e) => {
+        const tag = e.target.parentNode.getAttribute('data-filter');
+        this.selected.delete(tag);
+        this.displayTags();
 
-    // Listener Tags: tag selection
-    listenForSelection() {
+        if (this.selected.size === 0) {
+          list.filtered = list.all;
+          list.build(list.all);
+        } else {
+          list.filtered = this.filter(list.all);
+          list.build(list.filtered);
+        }
+      });
+    });
+  }
 
-        document.querySelectorAll(`.list-${this.type}`).forEach(tag => { 
-            
-            tag.addEventListener('click', (e) => {
+  // Dropdown: open / close
+  listenToDropdown() {
+    this.openDropdown();
+    this.closeDropdown();
+  }
 
-                let tag = e.target.getAttribute('data-filter');
-                this.selected.add(tag);
-                this.displayTags();
-                list.filtered = this.filter(list.filtered);
-                list.build(list.filtered); 
-                
-            })
-        })
-    }
+  // Dropdown: closing
+  openDropdown() {
+    document.getElementById(`dropdown-${this.type}`).addEventListener('click', () => {
+      document.getElementById(`dropdown-${this.type}`).style.width = '26.5rem';
+      document.getElementById(`menu-${this.type}`).style.display = 'block';
+      document.getElementById(`menu-${this.type}`).style.width = '26.5rem';
+    });
+  }
 
-    // Listener Tags: close the tag selected by the cross
-    listenForUnselect() {
+  // HTML display: list of data in the dropdown
+  render() {
+    let html = `<ul class="listUl-${this.type}"> `;
 
-        document.querySelectorAll(`.closed-${this.type}`).forEach(tag => {
+    this.filtered.forEach((tag) => {
+      html += `<li class="list-${this.type}" data-filter="${tag}">${tag}</li>`;
+    });
 
-            tag.addEventListener('click', (e) => {
+    html += '</ul>';
+    document.getElementById(`${this.type}-example`).innerHTML = html;
+  }
 
-                let tag = e.target.parentNode.getAttribute('data-filter');
-                this.selected.delete(tag);
-                this.displayTags();
-
-                if(this.selected.size === 0) {
-                    list.filtered = list.all;
-                    list.build(list.all)
-
-                } else {
-                    list.filtered = this.filter(list.all);
-                    list.build(list.filtered) 
-                }
-            })
-        })
-    } 
-
-    // Dropdown: open / close 
-    listenToDropdown() {
-        this.openDropdown();
-        this.closeDropdown();
-    }
-
-    //Dropdown: closing
-    openDropdown() {
-
-        document.getElementById(`dropdown-${this.type}`).addEventListener('click', () => {
-
-            document.getElementById(`dropdown-${this.type}`).style.width = "26.5rem";           
-            document.getElementById(`menu-${this.type}`).style.display = "block"; 
-            document.getElementById(`menu-${this.type}`).style.width= "26.5rem";
-        });
-    }
-
-    // HTML display: list of data in the dropdown 
-    render() {
-
-        let html = `<ul class="listUl-${this.type}"> `;
-
-        this.filtered.forEach((tag)=> {
-            html += `<li class="list-${this.type}" data-filter="${tag}">${tag}</li>`
-        })
-
-        html += '</ul>'
-        document.getElementById(`${this.type}-example`).innerHTML = html;  
-    }
-
-    // HTML poster: drop-down lists
-    renderDropdown() {
-
-        document.getElementById('filters').innerHTML +=
-        `<div class="${this.type} dropdown-wrapper" data-type="${this.type}">
+  // HTML poster: drop-down lists
+  renderDropdown() {
+    document.getElementById('filters').innerHTML
+        += `<div class="${this.type} dropdown-wrapper" data-type="${this.type}">
             <button id="dropdown-${this.type}">${this.type} <i class="fas fa-chevron-down" role="button" style="margin-left: 7px"></i></button>
             <div id="menu-${this.type}" class="menu-${this.type}">
                 <label for="input-${this.type}"></label>
@@ -162,6 +150,6 @@ class Filters {
                 <i class="fas fa-chevron-up" id="${this.type}-close" role="button"></i>
                 <div id="${this.type}-example"></div>
             </div>
-        </div>`
-    }
+        </div>`;
+  }
 }
