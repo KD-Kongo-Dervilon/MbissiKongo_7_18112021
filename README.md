@@ -136,10 +136,13 @@ which style guide do you want to follow? airbnb
 what format do you want your config file to be in ? Javascript
 would you like to install them now with npm ?
 
+Architectures des algos
+<img width="1051" alt="Capture d’écran 2021-12-03 à 11 48 44" src="https://user-images.githubusercontent.com/82412416/144590474-fa2a1f5e-9292-4d99-945f-3dd1a9b28352.png">
+<img width="1046" alt="Capture d’écran 2021-12-03 à 11 49 28" src="https://user-images.githubusercontent.com/82412416/144590483-e5ccb825-3696-4957-bbb8-e3c161f41bd8.png"><img width="1093" alt="Capture d’écran 2021-12-03 à 11 50 00" src="https://user-images.githubusercontent.com/82412416/144590495-86cf9827-c79a-4a74-896a-11e57c1a3bfa.png">
+
+
 
 <img width="439" alt="Capture d’écran 2021-12-03 à 11 46 57" src="https://user-images.githubusercontent.com/82412416/144590061-e5522953-9461-4af5-ba66-0473b15dc3a8.png">
 
-Architectures des algos
-<img src="img/ecrit alogo 1.pdf">
-<img src="img/map 1 alogo 1.pdf">
-<img src="img/map algo 1.pdf">
+
+
