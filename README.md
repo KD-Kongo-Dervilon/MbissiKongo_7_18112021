@@ -137,6 +137,7 @@ what format do you want your config file to be in ? Javascript
 would you like to install them now with npm ?
 
 
+<img width="439" alt="Capture d’écran 2021-12-03 à 11 46 57" src="https://user-images.githubusercontent.com/82412416/144590061-e5522953-9461-4af5-ba66-0473b15dc3a8.png">
 
 Architectures des algos
 <img src="img/ecrit alogo 1.pdf">
