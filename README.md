@@ -140,3 +140,5 @@ would you like to install them now with npm ?
 
 Architectures des algos
 <img src="img/ecrit alogo 1.pdf">
+<img src="img/map 1 alogo 1.pdf">
+<img src="img/map algo 1.pdf">
