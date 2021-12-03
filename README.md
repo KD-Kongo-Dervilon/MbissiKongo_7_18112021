@@ -2,6 +2,8 @@
 
 Les petits plats 
 
+lien de la démo :https://kd-kongo-dervilon.github.io/MbissiKongo_7_18112021/
+
 Alog1 
 
 La version alog1 utilise les méthodes de l'object array(foreach, filter,map) , elle et entierement basée sur le desing patern ,ça fais que l'algorythme et évolutif et plus performant .
