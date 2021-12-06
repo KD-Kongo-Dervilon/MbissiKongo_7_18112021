@@ -110,8 +110,6 @@ list.search = new Search();
 On filtre pour la recherche input
 list.search.listen();
 
-
-
 Installation
 ce projet ne comporte aucune dependance 
 
@@ -123,7 +121,6 @@ J'utilise l'outil eslint  c'est un outils pour le langage de programmation Javas
     Une bonne lisibilité du code, que ça soit par vous-même, plus tard, ou par vos collègues ;
     Une meilleure maintenabilité, notamment grâce à cette lisibilité améliorée ;
     Une meilleure gestion des ressources et performances, et donc un produit plus qualitatif.
-
 
 mise en place pour installer eslint
 npm init 
@@ -146,4 +143,6 @@ Architectures des algos
 
 
 <img width="439" alt="Capture d’écran 2021-12-03 à 11 46 57" src="https://user-images.githubusercontent.com/82412416/144590061-e5522953-9461-4af5-ba66-0473b15dc3a8.png">
+
+
 
