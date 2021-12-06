@@ -142,4 +142,5 @@ Builder.init();
 
 Le project ne comporte aucune dependance 
 
-Architectures des algos
+Architectures des algos<img width="1101" alt="Capture d’écran 2021-12-06 à 13 26 49" src="https://user-images.githubusercontent.com/82412416/144846061-436d3120-cb2a-4f5f-bbcc-0d3e2b513305.png">
+![Uploading Capture d’écran 2021-12-06 à 13.26.22.png…]()
