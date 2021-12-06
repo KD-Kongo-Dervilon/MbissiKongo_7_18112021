@@ -2,6 +2,8 @@
 
 Les petits plats 
 
+lien de la démo :https://kd-kongo-dervilon.github.io/MbissiKongo_7_18112021/
+
 Alog1 
 
 La version alog1 utilise les méthodes de l'object array(foreach, filter,map) , elle et entierement basée sur le desing patern ,ça fais que l'algorythme et évolutif et plus performant .
@@ -108,6 +110,8 @@ list.search = new Search();
 On filtre pour la recherche input
 list.search.listen();
 
+
+
 Installation
 ce projet ne comporte aucune dependance 
 
@@ -119,6 +123,7 @@ J'utilise l'outil eslint  c'est un outils pour le langage de programmation Javas
     Une bonne lisibilité du code, que ça soit par vous-même, plus tard, ou par vos collègues ;
     Une meilleure maintenabilité, notamment grâce à cette lisibilité améliorée ;
     Une meilleure gestion des ressources et performances, et donc un produit plus qualitatif.
+
 
 mise en place pour installer eslint
 npm init 
@@ -134,7 +139,11 @@ which style guide do you want to follow? airbnb
 what format do you want your config file to be in ? Javascript
 would you like to install them now with npm ?
 
-
-
 Architectures des algos
-<img src="img/ecrit alogo 1.pdf">
+<img width="1051" alt="Capture d’écran 2021-12-03 à 11 48 44" src="https://user-images.githubusercontent.com/82412416/144590474-fa2a1f5e-9292-4d99-945f-3dd1a9b28352.png">
+<img width="1046" alt="Capture d’écran 2021-12-03 à 11 49 28" src="https://user-images.githubusercontent.com/82412416/144590483-e5ccb825-3696-4957-bbb8-e3c161f41bd8.png"><img width="1093" alt="Capture d’écran 2021-12-03 à 11 50 00" src="https://user-images.githubusercontent.com/82412416/144590495-86cf9827-c79a-4a74-896a-11e57c1a3bfa.png">
+
+
+
+<img width="439" alt="Capture d’écran 2021-12-03 à 11 46 57" src="https://user-images.githubusercontent.com/82412416/144590061-e5522953-9461-4af5-ba66-0473b15dc3a8.png">
+
