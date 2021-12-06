@@ -148,3 +148,4 @@ Architectures des algos<img width="1101" alt="Capture d’écran 2021-12-06 à
 
 <img width="1408" alt="Capture d’écran 2021-12-06 à 13 41 13" src="https://user-images.githubusercontent.com/82412416/144847895-84654c41-c90d-4e45-aabc-8a602a3648e4.png">
 
+<img width="1431" alt="Capture d’écran 2021-12-06 à 13 46 33" src="https://user-images.githubusercontent.com/82412416/144848624-de5fa94a-f18a-4166-bc94-4c78ade457c9.png">
