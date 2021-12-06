@@ -140,7 +140,11 @@ Réinitialiser la construction
 Utils.clearRecipesSection();
 Builder.init();
 
-Le project ne comporte aucune dependance 
+Le project ne comporte aucune dependance <img width="1106" alt="Capture d’écran 2021-12-06 à 13 42 59" src="https://user-images.githubusercontent.com/82412416/144848046-0fa1173f-769a-4003-9838-e999162be58a.png">
+
 
 Architectures des algos<img width="1101" alt="Capture d’écran 2021-12-06 à 13 26 49" src="https://user-images.githubusercontent.com/82412416/144846061-436d3120-cb2a-4f5f-bbcc-0d3e2b513305.png">
-![Uploading Capture d’écran 2021-12-06 à 13.26.22.png…]()
+
+
+<img width="1408" alt="Capture d’écran 2021-12-06 à 13 41 13" src="https://user-images.githubusercontent.com/82412416/144847895-84654c41-c90d-4e45-aabc-8a602a3648e4.png">
+
