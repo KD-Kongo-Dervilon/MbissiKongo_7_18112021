@@ -9,7 +9,7 @@ La version main Utilise la méthode for et foreach , et les class , j'import  et
 
 Actuellement la version  algo1 basé sur le desing patern et la plus performante et rapide ,pas de module à importer ou exporter ,juste un extend de la class filter
 
-le nombre de champ minimun requis pour pouvoir déclencher la recherche dans l'input dois être superieure à 2 ou égale à 2
+le nombre de champ minimun requis pour pouvoir déclencher la recherche dans l'input dois être superieure à 3 
 
 L'application consiste en une page simple, réalisée avec Javascript (vanilla) avec des class et un import des differents components
 
