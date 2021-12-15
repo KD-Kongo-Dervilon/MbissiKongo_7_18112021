@@ -10,7 +10,7 @@ La version alog1 utilise les méthodes de l'object array(foreach, filter,map) , 
 
 Actuellement la version basé sur le desing patern et la  plus performante et rapide ,pas de module à importer ou exporter ,juste un extend de la class filter .
 
-le nombre de  champ minimun requis pour pouvoir déclencher la recherche dans l'input dois être superieure à 3 ou égale à 3
+le nombre de  champ minimun requis pour pouvoir déclencher la recherche dans l'input dois être superieure à 3 
 
 L'application consiste en une page simple, réalisée avec Javascript (vanilla) avec des class et un extend de la classe filter. 
 
